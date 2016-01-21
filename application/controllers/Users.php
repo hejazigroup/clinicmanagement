@@ -58,8 +58,17 @@ class Users extends CI_Controller {
 
 	public function lab()
 	{
-		$data['content'] = 'Users/lab';
-		$this->load->view('layout/adminpanel', $data);
+		if ($this->session->userdata('logged_in')) {
+			// You function code should be placed here .
+			echo "false";
+
+		} else {
+			echo 'ahmed';
+			//$data['content'] = 'Users/lab';
+			//$this->load->view('layout/adminpanel', $data);
+
+		}
+
 	}
 
 	public function xray()
